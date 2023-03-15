@@ -43,7 +43,7 @@ button{
 }
 
 
-button:active{
+button:focus{
     background-color: #0A99FE;
     color: white;
     font-size: 20px;
@@ -60,7 +60,7 @@ section{
     
 }
 
-/* Título da seção */
+
 h3{
     color: #1B1B1B;
     font-size: 20px;
@@ -70,7 +70,7 @@ h3{
     
 }
 
-/* Nome do produto */
+
 span{
     color: #1B1B1B;
     font-size: 20px;
@@ -79,9 +79,10 @@ span{
     width: 100%;
     text-align: center;
     height: 60px; 
+    padding: 25px;
 }
 
-/* Valor do produto */
+
 p{
     color: #868383;
     font-size: 16px;
@@ -91,21 +92,15 @@ p{
     text-align: center;
     margin-bottom: 20px;
     align-content: center;
+    padding-top: 25px;
 }
-
-
-figure{ 
-    height: 80%;
-    display: flex;
-}
-
 
 img{
     width: 205px;
-    max-height: 120px;
+    height: 60%;
 }
 
-/* Cards */
+
 li{
     display: flex;
     flex-direction: column;

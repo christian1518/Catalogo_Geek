@@ -40,7 +40,6 @@ let itens = [
 
 const body = document.querySelector("body")
 
-//criando elementos e adicionando dados a eles
 const main = document.createElement("main")
 body.appendChild(main)
 
@@ -60,15 +59,15 @@ sectionFrames.appendChild(titleFrames)
 
 sectionAction.classList.add("action_section")
 sectionFrames.classList.add("frames_section")
-const ulFrames = document.createElement("ul")  // armazenará os cards tipo "frames"
-const ulFigures = document.createElement("ul")  // armazenará os cards tipo "action"
+const ulFrames = document.createElement("ul")  
+const ulFigures = document.createElement("ul")  
 sectionFrames.appendChild(ulFrames)  
 sectionAction.appendChild(ulFigures)
 
 
 
-let listFigures = []   //armazenará os objetos tipo "action"
-let listFrames = []    //armazenará os objetos tipo "frames"
+let listFigures = []   
+let listFrames = []    
 function separeteItens(itensList){ 
     for(let i = 0; i < itensList.length; i++){
         if(itensList[i].type == 'Painting'){
@@ -81,19 +80,17 @@ function separeteItens(itensList){
 separeteItens(itens)
 
 
-//criando card para seção de frames
+
 for(let i = 0; i < listFrames.length; i++){
     const cardFrames = document.createElement("li")
 
-    const boxImgFrames = document.createElement("figure")
     const imgFrames = document.createElement("img")
     imgFrames.src= listFrames[i].image
-    boxImgFrames.appendChild(imgFrames)
-    cardFrames.appendChild(boxImgFrames)
+    cardFrames.appendChild(imgFrames)
 
-    const nomeFrames = document.createElement("span")
-    nomeFrames.innerHTML = listFrames[i].name
-    cardFrames.appendChild(nomeFrames)
+    const nameFrames = document.createElement("span")
+    nameFrames.innerHTML = listFrames[i].name
+    cardFrames.appendChild(nameFrames)
 
     const priceFrames = document.createElement("p")
     priceFrames.innerText = listFrames[i].price
@@ -103,19 +100,17 @@ for(let i = 0; i < listFrames.length; i++){
 }
 
 
-//criando card para seção de action figures
+
 for(let i = 0; i < listFigures.length; i++){
     const cardFigures = document.createElement("li")
     
-    const boxImgFigures = document.createElement("figure")
     const imgFigures = document.createElement("img")
     imgFigures.src= listFigures[i].image
-    boxImgFigures.appendChild(imgFigures)
-    cardFigures.appendChild(boxImgFigures)
+    cardFigures.appendChild(imgFigures)
 
-    const nomeFigures = document.createElement("span")
-    nomeFigures.innerText = listFigures[i].name
-    cardFigures.appendChild(nomeFigures) 
+    const nameFigures = document.createElement("span")
+    nameFigures.innerText = listFigures[i].name
+    cardFigures.appendChild(nameFigures) 
 
     const priceFigures = document.createElement("p")
     priceFigures.innerText = listFigures[i].price
